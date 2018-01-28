@@ -28,37 +28,42 @@
         <div class="container">
             <div class="hidenav">
                 <div class="navbody">
-                    <div class="navitems">
-                        <a href="javascript:void(0);" class="btn">
-                            <span class="icon-home"></span>
-                            <span class="nav-text">首页</span>
-                        </a>
-                    </div>
 
-                    <div class="navitems">
-                        <a href="javascript:void(0);" class="btn">
-                            <span class="icon-home"></span>
-                            <span class="nav-text">首页</span>
-                        </a>
+                        {% for menu in menus %}
+                            <div class="navitems">
+                        <a href="{{ url_for('auth.menu',id=menu.id) }}"><span class="nav-text">{{ menu.name }}</span></a>
                     </div>
-                    <div class="navitems">
-                        <a href="javascript:void(0);" class="btn">
-                            <span class="icon icon-globe"></span>
-                            <span class="nav-text">动态</span>
-                        </a>
-                    </div>
-                    <div class="navitems">
-                        <a href="javascript:void(0);" class="btn">
-                            <span class="icon icon-gift"></span>
-                            <span class="nav-text">礼物</span>
-                        </a>
-                    </div>
-                    <div class="navitems">
-                        <a href="javascript:void(0);" class="btn">
-                            <span class="icon icon-cogs"></span>
-                            <span class="nav-text">设置</span>
-                        </a>
-                    </div>
+                        {% endfor %}
+{#                        <a href="javascript:void(0);" class="btn">#}
+{#                            <span class="icon-home"></span>#}
+{#                            <span class="nav-text">首页</span>#}
+{#                        </a>#}
+
+{##}
+{#                    <div class="navitems">#}
+{#                        <a href="javascript:void(0);" class="btn">#}
+{#                            <span class="icon-home"></span>#}
+{#                            <span class="nav-text">首页</span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <div class="navitems">#}
+{#                        <a href="javascript:void(0);" class="btn">#}
+{#                            <span class="icon icon-globe"></span>#}
+{#                            <span class="nav-text">动态</span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <div class="navitems">#}
+{#                        <a href="javascript:void(0);" class="btn">#}
+{#                            <span class="icon icon-gift"></span>#}
+{#                            <span class="nav-text">礼物</span>#}
+{#                        </a>#}
+{#                    </div>#}
+{#                    <div class="navitems">#}
+{#                        <a href="javascript:void(0);" class="btn">#}
+{#                            <span class="icon icon-cogs"></span>#}
+{#                            <span class="nav-text">设置</span>#}
+{#                        </a>#}
+{#                    </div>#}
                 </div>
                 <div class="navtitle">
                     <div class="navitems">
