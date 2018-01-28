@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-12" id="submit-comment-container">
+        <form class="submit-comment-form" id="submit-comment-form" method="post" action="">
+            {{ form.csrf_token }}
+            {{ form.body.label }}{{ form.body(class='form-control', required='') }}
+            <div align="center">
+                <button type="submit" class="btn btn-success">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

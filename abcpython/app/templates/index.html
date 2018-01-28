@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}欢迎来到初学python网{% endblock %}
+{% block page_content %}
+    {% if posts %}
+        {% include "_post_entry.html" %}
+        <div class="pagination">
+            {% if endpoint == '.index' %}
+                {{ macros.pagination_widget(pagination, endpoint) }}
+            {% else %}
+                {{ macros.pagination_widget(pagination, endpoint, id=id) }}
+            {% endif %}
+        </div>
+    {% else %}
+        <div style="text-align: center;
+                     font-size: 100px;
+                     " >一篇博文都没有</div>
+    {% endif %}
+
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ pagedown.include_pagedown() }}
+{% endblock %}

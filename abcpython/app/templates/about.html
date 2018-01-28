@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {#    网站logo#}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    {#    大事件#}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/wangzhandashijian.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.eventFlow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/show_dashijian.js') }}"></script>
+
+    {#    进度条#}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nprogress.css') }}">
+    <script src="{{ url_for('static', filename='js/nprogress.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/show_nprogress.js') }}"></script>
+
+</head>
+<title>关于初学python网</title>
+<body>
+
+{#                右下角logo以及登录后管理菜单#}
+
+<a href="https://abcpython.com" target="_black" style="position:fixed; bottom:70px; right:20px;">
+    <img src="{{ url_for('static', filename='favicon.ico') }}"
+    >
+</a>
+
+<div class="w1000 tc body">
+    <p>一次偶然的机会接触了《Flask Web开发：基于Python的Web应用开发实战》这本书就一发不可收拾了</p>
+    <p>网站用centos7.2 x64+python3.5.2+flask0.12.2+uwsgi2.0.15+nginx1.12.2+mysql5.7+bootstrap3</p>
+    <p>有一部分素材以及教程来自互联网，一并表示感谢！名单如下：</p>
+    <p><a href="http://www.bootcss.com/" target="_blank">
+        <img src="../static/images/youqinglianjie/bootcss.png">Bootstrap中文网</a>
+        &nbsp;( ͡° ͜ʖ ͡°)&nbsp;
+        <a href="http://www.runoob.com/bootstrap/" target="_blank">
+            <img src="../static/images/youqinglianjie/cainiao.png">菜鸟教程网</a>
+        &nbsp;( ͡° ͜ʖ ͡°)&nbsp;
+        <a href="http://www.5iweb.com.cn/" target="_blank">
+            <img src="../static/images/youqinglianjie/5iweb.png" height="32" width="32" >网页特效库</a>
+        &nbsp;( ͡° ͜ʖ ͡°)&nbsp;
+        <a href="http://www.gbtags.com/" target="_blank">
+            <img src="../static/images/youqinglianjie/gbtags.png" height="32" width="32" >极客标签</a>
+    </p>
+    <h1 class='header'>初学python网大事件</h1>
+    <div class="event_wrap clearfix">
+        <div class="middle_line">
+        </div>
+    </div>
+</div>
+</body>
+</html>

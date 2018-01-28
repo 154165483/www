@@ -1,0 +1,135 @@
+<ul class="comments">
+    {% if comments %}
+        {% for comment in comments %}
+            <li class="comment">
+                <div class="comment-thumbnail">
+                    <a href="{{ url_for('main.user', username=comment.author.username) }}">
+                        <img class="img-rounded profile-thumbnail" src="{{ comment.author.gravatar(size=40) }}">
+                    </a>
+                </div>
+                <div class="comment-info">
+                    <div class="comment-date">
+                        <span>{{ moment(comment.timestamp.replace(microsecond=0)).format('LLL') }}</span></div>
+                    <div class="comment-author">
+                    <span><a
+                            href="{{ url_for('main.user', username=comment.author.username) }}">{{ comment.author.username }}</a></span>
+                        {% if Users.query.filter_by(email="admin@abcpython.com").count() %}
+                            <span class="glyphicon glyphicon-user">管理员</span>
+                        {% endif %}
+                    </div>
+                    <div class="comment-content">
+                        {% if moderate or not comment.disabled %}
+                            {% if comment.body_html %}
+                                {{ comment.body_html | safe }}
+                            {% else %}
+                                {{ comment.body }}
+                            {% endif %}
+                        {% endif %}
+                        {% if comment.disabled == True and current_user.is_authenticated %}
+                            <p class="disabled-comment-admin-info">
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                <i>该评论已经被管理员--{{ current_user.username }}--屏蔽！</i>
+                            </p>
+                        {% elif comment.disabled == True %}
+                            <p class="disabled-comment-admin-info">
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                                <i>该评论已经被管理员--{{ current_user.username }}--屏蔽！访客无法查看和回复此评论内容。</i>
+                            </p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row comment-handle">
+                    {% if current_user.can(Permission.ADMINISTER) %}
+                        <div class="col-sm-1 col-sm-offset-8">
+                            {% if comment.disabled == False %}
+                                <a class="btn btn-sm btn-warning"
+                                   href="{{ url_for('.moderate_disable', id=comment.id, page=page) }}">
+                                    <span class="glyphicon glyphicon-remove-sign"></span> 屏蔽
+                                </a>
+                            {% else %}
+                                <a class="btn btn-sm btn-success"
+                                   href="{{ url_for('.moderate_enable', id=comment.id, page=page) }}">
+                                    <span class="glyphicon glyphicon-ok-sign"></span> 恢复
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-sm-1 delete-comment">
+                            <button class="btn btn-sm btn-danger"
+                                    onclick="delCommentCfm('{{ url_for('.moderate_delete', id=comment.id, page=page) }}')">
+                                <span class="glyphicon glyphicon-trash"></span> 删除
+                            </button>
+                        </div>
+                    {% elif current_user.can(Permission.MODERATE_COMMENTS) and current_user.username == comment.author.username %}
+                        <div class="col-sm-1 col-sm-offset-8">
+                            {#                            {% if comment.disabled == False %}#}
+                            {#                                <a class="btn btn-sm btn-warning"#}
+                            {#                                   href="{{ url_for('.moderate_disable', id=comment.id, page=page) }}">#}
+                            {#                                    <span class="glyphicon glyphicon-remove-sign"></span> 屏蔽#}
+                            {#                                </a>#}
+                            {#                            {% else %}#}
+                            {#                                <a class="btn btn-sm btn-success"#}
+                            {#                                   href="{{ url_for('.moderate_enable', id=comment.id, page=page) }}">#}
+                            {#                                    <span class="glyphicon glyphicon-ok-sign"></span> 恢复#}
+                            {#                                </a>#}
+                            {#                            {% endif %}#}
+                        </div>
+                        <div class="col-sm-1 delete-comment">
+                            <button class="btn btn-sm btn-danger"
+                                    onclick="delCommentCfm('{{ url_for('.moderate_delete', id=comment.id, page=page) }}')">
+                                <span class="glyphicon glyphicon-trash"></span> 删除
+                            </button>
+                        </div>
+                    {% endif %}
+                    {% if comment.disabled == False and current_user.is_authenticated %}
+                        {% if current_user.is_anonymous %}
+                            <div class="col-sm-1 col-sm-offset-11">
+                                <button class="btn btn-sm btn-info"
+                                        onclick="go_to_reply({{ comment.id }}, '{{ comment.author_name }}')">
+                                    <span class="glyphicon glyphicon-comment"></span> 回复
+                                </button>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-1">
+                                <button class="btn btn-sm btn-info"
+                                        onclick="go_to_reply({{ comment.id }}, '{{ comment.author_name }}')">
+                                    <span class="glyphicon glyphicon-comment"></span> 回复
+                                </button>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li class="comment">
+            <div class="comment-content">暂无评论</div>
+        </li>
+    {% endif %}
+</ul>
+
+<!-- 信息删除确认: For delete a comment confirm -->
+<div class="modal fade" id="delCommentCfmModel">
+    <div class="modal-dialog">
+        <div class="modal-content message_align">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <h4 class="modal-title" align="center">确认删除评论？</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <p>
+                    该评论删除后不可恢复，您确认要删除吗？
+                </p>
+                <p>
+                    （提示：如果您只是不想显示该评论内容，可以选择将其屏蔽，而不必删除。）
+                <div style="color: #ff0000">屏蔽需要管理员权限</div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">取消</button>
+                <a onclick="" id="delCommentCfmClick" class="btn btn-danger" data-dismiss="modal">确定</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

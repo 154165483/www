@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+{% endblock %}
+{% block title %}Admin Edit Post-{{ post.title }}{% endblock %}
+{% block page_content %}
+    <div class="page-header" align="center">
+        <h1>Edit the Post - {{ post.title }} for Admin</h1>
+    </div>
+    <div class="entry-box submit-article">
+        <hr/>
+        <form class="submit-article" method="post" action="">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{ form.title.label(class='control-label') }}：<br>
+                {{ form.title(class='submit-article-title', required='') }}（1-50字）
+            </div>
+            <div class="form-group">
+                {{ form.summary.label(class='control-label') }}（显示在博客首页）：<br>
+                {{ form.summary(class='submit-article-summary form-control', required='') }}
+            </div>
+            <div class="form-group">
+                {{ form.body.label(class='control-label') }}（博客正文）：<br>
+                {{ form.body(class='ckeditor') }}
+                <script type="text/javascript">
+                    CKEDITOR.replace(
+                        "body", {
+                            filebrowserUploadUrl: 'upload/'
+                        });
+                </script>
+
+            </div>
+            <div class="form-group">
+                {{ form.source.label(class='control-label') }}：
+                {{ form.source() }}
+            </div>
+            <div class="form-group">
+                {{ form.menu.label(class='control-label') }}：
+                {{ form.menu() }}
+            </div>
+
+            <div class="submit-article-button" >
+                <button type="submit" class="btn btn-success">提交</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ pagedown.include_pagedown() }}
+{% endblock %}

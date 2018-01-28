@@ -1,0 +1,328 @@
+2018-01-25T12:50:35.480368Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2018-01-25T12:50:35.495027Z 0 [Note] /usr/sbin/mysqld (mysqld 5.7.20) starting as process 1715 ...
+2018-01-25T12:50:35.696794Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-01-25T12:50:35.696843Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-01-25T12:50:35.696850Z 0 [Note] InnoDB: Uses event mutexes
+2018-01-25T12:50:35.696854Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-01-25T12:50:35.696858Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-01-25T12:50:35.696877Z 0 [Note] InnoDB: Using Linux native AIO
+2018-01-25T12:50:35.697134Z 0 [Note] InnoDB: Number of pools: 1
+2018-01-25T12:50:35.697231Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-01-25T12:50:35.730996Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-01-25T12:50:35.738853Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-01-25T12:50:35.740640Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-01-25T12:50:35.833836Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-01-25T12:50:36.069628Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-01-25T12:50:36.069704Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-01-25T12:50:36.582768Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-01-25T12:50:36.584632Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2018-01-25T12:50:36.584655Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-01-25T12:50:36.585386Z 0 [Note] InnoDB: Waiting for purge to start
+2018-01-25T12:50:36.635679Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 5503827
+2018-01-25T12:50:36.636518Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-01-25T12:50:36.636944Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/www/mysql/ib_buffer_pool
+2018-01-25T12:50:36.689942Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180125 20:50:36
+2018-01-25T12:50:36.741606Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2018-01-25T12:50:36.772293Z 0 [Warning] CA certificate ca.pem is self signed.
+2018-01-25T12:50:36.775108Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2018-01-25T12:50:36.775166Z 0 [Note] IPv6 is available.
+2018-01-25T12:50:36.775182Z 0 [Note]   - '::' resolves to '::';
+2018-01-25T12:50:36.775205Z 0 [Note] Server socket created on IP: '::'.
+2018-01-25T12:50:37.690648Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-01-25T12:50:37.690901Z 0 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.7.20'  socket: '/usr/local/www/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+2018-01-25T12:50:37.690915Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-01-25T12:50:37.690920Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-01-25T12:50:38.278949Z 0 [Note] End of list of non-natively partitioned tables
+2018-01-25T12:50:49.599437Z 3 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:54:32.332961Z 0 [Note] Giving 5 client threads a chance to die gracefully
+2018-01-25T12:54:32.332982Z 0 [Note] Shutting down slave threads
+2018-01-25T12:54:34.333103Z 0 [Note] Forcefully disconnecting 5 remaining clients
+2018-01-25T12:54:34.333158Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 5  user: 'root'
+
+2018-01-25T12:54:34.333202Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 4  user: 'root'
+
+2018-01-25T12:54:34.333251Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 6  user: 'root'
+
+2018-01-25T12:54:34.333268Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 7  user: 'root'
+
+2018-01-25T12:54:34.333284Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 8  user: 'root'
+
+2018-01-25T12:54:34.333299Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2018-01-25T12:54:34.337824Z 0 [Note] Binlog end
+2018-01-25T12:54:34.352402Z 0 [Note] Shutting down plugin 'validate_password'
+2018-01-25T12:54:34.352437Z 0 [Note] Shutting down plugin 'ngram'
+2018-01-25T12:54:34.352443Z 0 [Note] Shutting down plugin 'partition'
+2018-01-25T12:54:34.352448Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2018-01-25T12:54:34.352453Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2018-01-25T12:54:34.352457Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2018-01-25T12:54:34.352488Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2018-01-25T12:54:34.352496Z 0 [Note] Shutting down plugin 'MyISAM'
+2018-01-25T12:54:34.352507Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2018-01-25T12:54:34.352512Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2018-01-25T12:54:34.352516Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2018-01-25T12:54:34.352521Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2018-01-25T12:54:34.352558Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2018-01-25T12:54:34.352562Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2018-01-25T12:54:34.352566Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2018-01-25T12:54:34.352570Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2018-01-25T12:54:34.352574Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2018-01-25T12:54:34.352578Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2018-01-25T12:54:34.352582Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2018-01-25T12:54:34.352586Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2018-01-25T12:54:34.352590Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2018-01-25T12:54:34.352594Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2018-01-25T12:54:34.352598Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2018-01-25T12:54:34.352602Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2018-01-25T12:54:34.352606Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2018-01-25T12:54:34.352610Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2018-01-25T12:54:34.352614Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2018-01-25T12:54:34.352619Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2018-01-25T12:54:34.352623Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2018-01-25T12:54:34.352627Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2018-01-25T12:54:34.352631Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2018-01-25T12:54:34.352635Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2018-01-25T12:54:34.352639Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2018-01-25T12:54:34.352643Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2018-01-25T12:54:34.352648Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2018-01-25T12:54:34.352652Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2018-01-25T12:54:34.352656Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2018-01-25T12:54:34.352660Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2018-01-25T12:54:34.352664Z 0 [Note] Shutting down plugin 'InnoDB'
+2018-01-25T12:54:34.352770Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2018-01-25T12:54:34.352895Z 0 [Note] InnoDB: Starting shutdown...
+2018-01-25T12:54:34.453429Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/www/mysql/ib_buffer_pool
+2018-01-25T12:54:34.453675Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 180125 20:54:34
+2018-01-25T12:54:35.790697Z 0 [Note] InnoDB: Shutdown completed; log sequence number 5505725
+2018-01-25T12:54:35.792092Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2018-01-25T12:54:35.792105Z 0 [Note] Shutting down plugin 'MEMORY'
+2018-01-25T12:54:35.792111Z 0 [Note] Shutting down plugin 'CSV'
+2018-01-25T12:54:35.792127Z 0 [Note] Shutting down plugin 'sha256_password'
+2018-01-25T12:54:35.792130Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2018-01-25T12:54:35.792305Z 0 [Note] Shutting down plugin 'binlog'
+2018-01-25T12:54:35.792648Z 0 [Note] /usr/sbin/mysqld: Shutdown complete
+
+2018-01-25T12:54:36.020894Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2018-01-25T12:54:36.022375Z 0 [Note] /usr/sbin/mysqld (mysqld 5.7.20) starting as process 1781 ...
+2018-01-25T12:54:36.025338Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-01-25T12:54:36.025366Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-01-25T12:54:36.025371Z 0 [Note] InnoDB: Uses event mutexes
+2018-01-25T12:54:36.025376Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-01-25T12:54:36.025379Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-01-25T12:54:36.025383Z 0 [Note] InnoDB: Using Linux native AIO
+2018-01-25T12:54:36.025659Z 0 [Note] InnoDB: Number of pools: 1
+2018-01-25T12:54:36.025763Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-01-25T12:54:36.027079Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-01-25T12:54:36.035088Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-01-25T12:54:36.036880Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-01-25T12:54:36.048795Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-01-25T12:54:36.072943Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-01-25T12:54:36.073008Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-01-25T12:54:36.478673Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-01-25T12:54:36.480611Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2018-01-25T12:54:36.480642Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-01-25T12:54:36.481396Z 0 [Note] InnoDB: Waiting for purge to start
+2018-01-25T12:54:36.531621Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 5505725
+2018-01-25T12:54:36.532001Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-01-25T12:54:36.536641Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/www/mysql/ib_buffer_pool
+2018-01-25T12:54:36.539469Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180125 20:54:36
+2018-01-25T12:54:36.539757Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2018-01-25T12:54:36.540015Z 0 [Warning] CA certificate ca.pem is self signed.
+2018-01-25T12:54:36.542909Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2018-01-25T12:54:36.542959Z 0 [Note] IPv6 is available.
+2018-01-25T12:54:36.542972Z 0 [Note]   - '::' resolves to '::';
+2018-01-25T12:54:36.542995Z 0 [Note] Server socket created on IP: '::'.
+2018-01-25T12:54:36.567772Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-01-25T12:54:36.567979Z 0 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.7.20'  socket: '/usr/local/www/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+2018-01-25T12:54:36.567992Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-01-25T12:54:36.567998Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-01-25T12:54:36.578236Z 0 [Note] End of list of non-natively partitioned tables
+2018-01-25T12:55:08.412419Z 5 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:55:09.672569Z 6 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:55:24.470167Z 7 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:55:26.001861Z 8 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:55:35.441010Z 9 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:55:38.599802Z 10 [Warning] IP address '117.91.24.76' has been resolved to the host name '76.24.91.117.broad.yz.js.dynamic.163data.com.cn', which resembles IPv4-address itself.
+2018-01-25T12:56:41.453723Z 11 [Warning] IP address '115.151.137.37' could not be resolved: Name or service not known
+2018-01-25T13:38:39.748746Z 12 [Warning] IP address '222.186.172.57' could not be resolved: Name or service not known
+2018-01-25T13:44:30.602225Z 13 [Warning] IP address '203.171.238.196' could not be resolved: Name or service not known
+2018-01-25T13:45:23.812615Z 14 [Warning] IP address '222.186.138.72' could not be resolved: Name or service not known
+2018-01-25T13:49:14.045842Z 15 [Warning] IP address '222.186.172.48' could not be resolved: Name or service not known
+2018-01-25T14:03:08.887993Z 16 [Warning] IP address '43.226.42.184' could not be resolved: Name or service not known
+2018-01-25T14:12:32.314875Z 17 [Warning] IP address '221.229.166.121' could not be resolved: Name or service not known
+2018-01-25T14:20:48.035418Z 18 [Warning] IP address '202.74.232.120' could not be resolved: Name or service not known
+2018-01-25T14:20:50.461286Z 19 [Warning] IP address '103.211.126.46' could not be resolved: Name or service not known
+2018-01-25T14:40:49.828646Z 21 [Warning] IP address '111.67.197.119' could not be resolved: Name or service not known
+2018-01-25T15:04:05.162094Z 26 [Warning] IP address '123.249.35.70' could not be resolved: Name or service not known
+2018-01-25T15:40:27.928837Z 27 [Warning] IP address '58.221.49.43' could not be resolved: Name or service not known
+2018-01-25T15:53:40.945403Z 28 [Warning] IP address '58.218.199.221' could not be resolved: Name or service not known
+2018-01-25T17:03:48.411511Z 34 [Warning] IP address '222.186.151.158' could not be resolved: Name or service not known
+2018-01-25T17:18:10.441516Z 35 [Warning] IP address '183.57.54.43' could not be resolved: Name or service not known
+2018-01-25T17:24:06.427651Z 36 [Warning] IP address '58.218.204.163' could not be resolved: Name or service not known
+2018-01-25T18:46:46.425163Z 37 [Warning] IP address '103.45.110.54' could not be resolved: Name or service not known
+2018-01-25T19:16:02.921416Z 40 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-25T21:38:58.479439Z 47 [Warning] IP address '119.1.109.46' could not be resolved: Name or service not known
+2018-01-25T21:47:48.914048Z 48 [Warning] IP address '128.1.164.120' could not be resolved: Name or service not known
+2018-01-26T00:07:45.898653Z 55 [Warning] IP address '115.151.137.222' could not be resolved: Name or service not known
+2018-01-26T00:18:01.563997Z 56 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-26T01:40:23.981664Z 62 [Warning] Hostname 'icsresearch6.plcscan.org' does not resolve to '188.138.125.155'.
+2018-01-26T01:40:23.981691Z 62 [Note] Hostname 'icsresearch6.plcscan.org' has the following IP addresses:
+2018-01-26T01:40:23.981695Z 62 [Note]  - 104.25.88.38
+2018-01-26T01:40:23.981698Z 62 [Note]  - 104.25.87.38
+2018-01-26T01:44:12.053287Z 63 [Warning] IP address '111.121.193.195' could not be resolved: Name or service not known
+2018-01-26T01:44:49.146152Z 32 [Note] Aborted connection 32 to db: 'abcpython' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2018-01-26T01:44:49.146332Z 33 [Note] Aborted connection 33 to db: 'abcpython' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2018-01-26T01:52:56.385450Z 64 [Warning] IP address '118.184.13.104' could not be resolved: Name or service not known
+2018-01-26T03:39:28.921239Z 70 [Warning] IP address '111.67.198.232' could not be resolved: Name or service not known
+2018-01-26T05:10:48.169180Z 75 [Warning] IP address '111.67.198.172' could not be resolved: Name or service not known
+2018-01-26T05:15:18.428690Z 76 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-26T05:29:45.976693Z 77 [Warning] IP address '125.77.29.24' could not be resolved: Name or service not known
+2018-01-26T08:44:36.286371Z 80 [Warning] IP address '121.50.168.21' could not be resolved: Name or service not known
+2018-01-26T10:14:54.164670Z 83 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-26T13:16:30.556109Z 91 [Warning] IP address '122.114.126.20' could not be resolved: Name or service not known
+2018-01-26T14:16:01.658232Z 92 [Warning] IP address '118.193.178.202' could not be resolved: Name or service not known
+2018-01-26T15:15:24.361555Z 95 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-26T16:08:26.565475Z 99 [Warning] IP address '117.48.202.179' could not be resolved: Name or service not known
+2018-01-26T16:08:44.443818Z 100 [Warning] IP address '58.215.225.174' could not be resolved: Name or service not known
+2018-01-26T16:40:48.802446Z 101 [Warning] IP address '196.52.43.54' could not be resolved: Name or service not known
+2018-01-26T17:00:03.833389Z 106 [Warning] IP address '196.52.43.113' could not be resolved: Name or service not known
+2018-01-26T17:09:09.999893Z 107 [Warning] IP address '118.184.38.124' could not be resolved: Name or service not known
+2018-01-26T17:20:59.533354Z 108 [Warning] IP address '202.168.151.99' could not be resolved: Name or service not known
+2018-01-26T17:26:52.517345Z 109 [Warning] IP address '103.210.238.45' could not be resolved: Name or service not known
+2018-01-26T17:43:06.432376Z 110 [Warning] IP address '221.229.166.125' could not be resolved: Name or service not known
+2018-01-26T20:17:23.565753Z 116 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-26T21:54:29.364895Z 122 [Warning] IP address '61.147.198.105' could not be resolved: Name or service not known
+2018-01-26T22:33:47.758317Z 123 [Warning] IP address '101.254.150.236' could not be resolved: Name or service not known
+2018-01-26T23:00:23.324702Z 127 [Warning] IP address '122.114.51.43' could not be resolved: Name or service not known
+2018-01-26T23:46:40.486735Z 128 [Warning] IP address '111.67.198.193' could not be resolved: Name or service not known
+2018-01-27T00:04:55.090359Z 96 [Note] Aborted connection 96 to db: 'abcpython' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2018-01-27T00:04:55.090478Z 97 [Note] Aborted connection 97 to db: 'abcpython' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2018-01-27T01:21:03.106277Z 131 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-27T01:26:52.161943Z 132 [Warning] IP address '222.186.151.14' could not be resolved: Name or service not known
+2018-01-27T02:31:32.722779Z 134 [Warning] IP address '111.67.198.192' could not be resolved: Name or service not known
+2018-01-27T02:45:59.571991Z 135 [Warning] IP address '222.186.172.44' could not be resolved: Name or service not known
+2018-01-27T02:51:00.555101Z 136 [Warning] IP address '222.186.172.51' could not be resolved: Name or service not known
+2018-01-27T03:53:33.769767Z 139 [Warning] IP address '154.85.252.102' could not be resolved: Name or service not known
+2018-01-27T04:49:57.691965Z 144 [Warning] IP address '111.67.198.173' could not be resolved: Name or service not known
+2018-01-27T05:34:00.726320Z 149 [Warning] IP address '221.229.204.211' could not be resolved: Name or service not known
+2018-01-27T06:24:00.342741Z 151 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-27T12:38:22.903647Z 165 [Warning] IP address '123.249.79.242' could not be resolved: Name or service not known
+2018-01-27T13:22:39.993288Z 171 [Warning] IP address '114.255.93.20' could not be resolved: Name or service not known
+2018-01-27T13:55:11.001302Z 173 [Warning] IP address '118.193.139.108' could not be resolved: Name or service not known
+2018-01-27T14:53:35.003469Z 175 [Warning] IP address '27.148.158.163' could not be resolved: Name or service not known
+2018-01-27T15:04:28.835364Z 178 [Warning] IP address '103.45.111.85' could not be resolved: Name or service not known
+2018-01-27T15:26:43.650885Z 184 [Warning] IP address '123.207.241.243' could not be resolved: Name or service not known
+2018-01-27T17:13:58.239184Z 193 [Warning] IP address '61.147.103.178' could not be resolved: Name or service not known
+2018-01-27T18:05:21.955887Z 195 [Warning] IP address '222.186.46.25' could not be resolved: Name or service not known
+2018-01-27T18:22:42.729666Z 196 [Warning] IP address '5.188.10.38' could not be resolved: Name or service not known
+2018-01-27T18:59:45.541207Z 270 [Warning] IP address '209.126.136.5' could not be resolved: Name or service not known
+2018-01-27T19:22:55.128199Z 274 [Warning] IP address '202.168.151.222' could not be resolved: Name or service not known
+2018-01-27T20:08:51.148715Z 276 [Warning] IP address '116.196.116.76' could not be resolved: Name or service not known
+2018-01-27T21:34:15.403032Z 283 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-27T22:39:30.197276Z 285 [Warning] IP address '103.100.210.237' could not be resolved: Name or service not known
+2018-01-27T23:01:37.711229Z 289 [Warning] Hostname 'ns1648.ztomy.com' does not resolve to '23.248.219.101'.
+2018-01-27T23:01:37.711255Z 289 [Note] Hostname 'ns1648.ztomy.com' has the following IP addresses:
+2018-01-27T23:01:37.711260Z 289 [Note]  - 204.11.56.48
+2018-01-28T02:38:51.333213Z 296 [Warning] IP address '221.204.249.139' has been resolved to the host name '139.249.204.221.adsl-pool.sx.cn', which resembles IPv4-address itself.
+2018-01-28T06:45:51.008967Z 0 [Note] Giving 4 client threads a chance to die gracefully
+2018-01-28T06:45:51.020081Z 0 [Note] Shutting down slave threads
+2018-01-28T06:45:53.054805Z 0 [Note] Forcefully disconnecting 4 remaining clients
+2018-01-28T06:45:53.054850Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 310  user: 'root'
+
+2018-01-28T06:45:53.054883Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 309  user: 'root'
+
+2018-01-28T06:45:53.054894Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 306  user: 'root'
+
+2018-01-28T06:45:53.054904Z 0 [Warning] /usr/sbin/mysqld: Forcing close of thread 305  user: 'root'
+
+2018-01-28T06:45:53.054918Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2018-01-28T06:45:53.079515Z 0 [Note] Binlog end
+2018-01-28T06:45:53.111346Z 0 [Note] Shutting down plugin 'validate_password'
+2018-01-28T06:45:53.117484Z 0 [Note] Shutting down plugin 'ngram'
+2018-01-28T06:45:53.117542Z 0 [Note] Shutting down plugin 'partition'
+2018-01-28T06:45:53.117553Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2018-01-28T06:45:53.117560Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2018-01-28T06:45:53.117565Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2018-01-28T06:45:53.117605Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2018-01-28T06:45:53.117614Z 0 [Note] Shutting down plugin 'MyISAM'
+2018-01-28T06:45:53.117631Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2018-01-28T06:45:53.117667Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2018-01-28T06:45:53.117674Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2018-01-28T06:45:53.117678Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2018-01-28T06:45:53.117682Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2018-01-28T06:45:53.117687Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2018-01-28T06:45:53.117691Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2018-01-28T06:45:53.117695Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2018-01-28T06:45:53.117699Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2018-01-28T06:45:53.117704Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2018-01-28T06:45:53.117708Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2018-01-28T06:45:53.117713Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2018-01-28T06:45:53.117717Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2018-01-28T06:45:53.117721Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2018-01-28T06:45:53.117725Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2018-01-28T06:45:53.117729Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2018-01-28T06:45:53.117733Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2018-01-28T06:45:53.117737Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2018-01-28T06:45:53.117741Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2018-01-28T06:45:53.117745Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2018-01-28T06:45:53.117749Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2018-01-28T06:45:53.117753Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2018-01-28T06:45:53.117757Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2018-01-28T06:45:53.117761Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2018-01-28T06:45:53.117765Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2018-01-28T06:45:53.117769Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2018-01-28T06:45:53.117773Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2018-01-28T06:45:53.117777Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2018-01-28T06:45:53.117781Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2018-01-28T06:45:53.117785Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2018-01-28T06:45:53.117790Z 0 [Note] Shutting down plugin 'InnoDB'
+2018-01-28T06:45:53.131100Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2018-01-28T06:45:53.131338Z 0 [Note] InnoDB: Starting shutdown...
+2018-01-28T06:45:53.231541Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/www/mysql/ib_buffer_pool
+2018-01-28T06:45:53.244797Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 180128 14:45:53
+2018-01-28T06:45:54.227226Z 0 [Note] InnoDB: Shutdown completed; log sequence number 6618062
+2018-01-28T06:45:54.292959Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2018-01-28T06:45:54.293017Z 0 [Note] Shutting down plugin 'MEMORY'
+2018-01-28T06:45:54.293035Z 0 [Note] Shutting down plugin 'CSV'
+2018-01-28T06:45:54.293040Z 0 [Note] Shutting down plugin 'sha256_password'
+2018-01-28T06:45:54.293043Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2018-01-28T06:45:54.303311Z 0 [Note] Shutting down plugin 'binlog'
+2018-01-28T06:45:54.303913Z 0 [Note] /usr/sbin/mysqld: Shutdown complete
+
+2018-01-28T06:45:55.091593Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2018-01-28T06:45:55.093069Z 0 [Note] /usr/sbin/mysqld (mysqld 5.7.20) starting as process 16552 ...
+2018-01-28T06:45:55.262486Z 0 [Note] InnoDB: PUNCH HOLE support available
+2018-01-28T06:45:55.262515Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-01-28T06:45:55.262520Z 0 [Note] InnoDB: Uses event mutexes
+2018-01-28T06:45:55.262538Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-01-28T06:45:55.262542Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2018-01-28T06:45:55.262558Z 0 [Note] InnoDB: Using Linux native AIO
+2018-01-28T06:45:55.262828Z 0 [Note] InnoDB: Number of pools: 1
+2018-01-28T06:45:55.262933Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2018-01-28T06:45:55.264292Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-01-28T06:45:55.272352Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2018-01-28T06:45:55.274193Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-01-28T06:45:55.360355Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-01-28T06:45:55.462345Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2018-01-28T06:45:55.462409Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2018-01-28T06:45:55.723967Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2018-01-28T06:45:55.725596Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2018-01-28T06:45:55.725628Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2018-01-28T06:45:55.726347Z 0 [Note] InnoDB: Waiting for purge to start
+2018-01-28T06:45:55.776569Z 0 [Note] InnoDB: 5.7.20 started; log sequence number 6618062
+2018-01-28T06:45:55.777427Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2018-01-28T06:45:55.777867Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/www/mysql/ib_buffer_pool
+2018-01-28T06:45:55.913081Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2018-01-28T06:45:55.946421Z 0 [Warning] CA certificate ca.pem is self signed.
+2018-01-28T06:45:55.947874Z 0 [Note] Server hostname (bind-address): '*'; port: 4357
+2018-01-28T06:45:55.947923Z 0 [Note] IPv6 is available.
+2018-01-28T06:45:55.947934Z 0 [Note]   - '::' resolves to '::';
+2018-01-28T06:45:55.947959Z 0 [Note] Server socket created on IP: '::'.
+2018-01-28T06:45:56.312394Z 0 [Note] InnoDB: Buffer pool(s) load completed at 180128 14:45:56
+2018-01-28T06:45:57.048922Z 0 [Note] Event Scheduler: Loaded 0 events
+2018-01-28T06:45:57.049177Z 0 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.7.20'  socket: '/usr/local/www/mysql/mysql.sock'  port: 4357  MySQL Community Server (GPL)
+2018-01-28T06:45:57.049190Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2018-01-28T06:45:57.049195Z 0 [Note] Beginning of list of non-natively partitioned tables
+2018-01-28T06:45:57.487176Z 0 [Note] End of list of non-natively partitioned tables

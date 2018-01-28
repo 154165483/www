@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}初学Python网 - {{ post.title }}{% endblock %}
+{% block page_content %}
+    <div id='article-detials' class="entry-box">
+        {% include '_show_post.html' %}
+        <hr>
+        <div>
+            {% if post.body_html %}
+                {{ post.body_html | safe }}
+            {% else %}
+                {{ post.body }}
+            {% endif %}
+        </div>
+        <div class="article-add-info">
+            <p>
+            <span class="glyphicon glyphicon-time">
+                博文最后更新时间：
+            </span>
+                {{ moment(post.update_time.replace(microsecond=0)).format('LLL') }}
+            </p>
+        </div>
+        {% if current_user == post.author %}
+            <div class="article-edit">
+                <button type="button" class="btn btn-warning btn-sm"
+                        onClick="editcfm('{{ url_for('main.edit', id=post.id) }}')">
+                    <span class="glyphicon glyphicon-pencil"></span>
+
+                    Edit
+                </button>
+                <button type="button" class="btn btn-danger btn-sm"
+                        onClick="delcfm('{{ url_for('main.delete',id=post.id) }}')">
+                    <span class="glyphicon  glyphicon-trash"></span>
+                    Delete
+                </button>
+            </div>
+        {% elif current_user.is_administrator() %}
+            <div class="article-edit">
+                <button type="button" class="btn btn-warning btn-sm"
+                        onClick="editcfm('{{ url_for('admin.edit', id=post.id) }}')">
+                    <span class="glyphicon  glyphicon-trash"></span>
+                    edit[Admin]
+                </button>
+                <button type="button" class="btn btn-danger btn-sm"
+                        onClick="delcfm('{{ url_for('admin.delete', id=post.id) }}')">
+                    <span class="glyphicon  glyphicon-trash"></span>
+                    delete[Admin]
+                </button>
+            </div>
+        {% endif %}
+
+
+        <script>
+            function delcfm(url) {
+                $('#url').val(url);//给会话中的隐藏属性URL赋值
+                $('#delcfmModel').modal();
+            }
+        </script>
+
+        <script>
+            function delSubmit() {
+                var url = $.trim($("#url").val());//获取会话中的隐藏属性URL
+                window.location.href = url;
+            }
+        </script>
+
+        <!-- 信息删除确认 -->
+        <div class="modal fade" id="delcfmModel">
+            <div class="modal-dialog">
+                <div class="modal-content message_align">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                        <h4 class="modal-title ">博文删除确认</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>删除博文将一并删除其下面的评论，是否继续删除？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="url"/>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">取消</button>
+                        <a onclick="delSubmit()" class="btn btn-danger" data-dismiss="modal">删除</a>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        {#编辑确认#}
+        <script>
+            function editcfm(url) {
+                $('#url').val(url);//给会话中的隐藏属性URL赋值
+                $('#editcfmModel').modal();
+            }
+        </script>
+
+        <script>
+            function editSubmit() {
+                var url = $.trim($("#url").val());//获取会话中的隐藏属性URL
+                window.location.href = url;
+            }
+        </script>
+
+        <!-- 信息编辑确认 -->
+        <div class="modal fade" id="editcfmModel">
+            <div class="modal-dialog">
+                <div class="modal-content message_align">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                        <h4 class="modal-title">博文编辑确认</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>即将进入到编辑博文页面，是否继续编辑？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" id="url"/>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">取消</button>
+                        <a onclick="editSubmit()" class="btn btn-danger" data-dismiss="modal">确定</a>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <hr>
+        <h4 id="comments"><span class="glyphicon glyphicon-comment">评论</span></h4>
+        {% include '_post_comments.html' %}
+        {% if comments %}
+            {% if pagination %}
+                <div class="pagination">
+                    {{ macros.pagination_widget(pagination, endpoint, id=id, fragment='#comments') }}
+                </div>
+            {% endif %}
+        {% endif %}
+        <h4 id="submit-comment"><span class="glyphicon glyphicon-comment">发表评论</span></h4>
+        {% if current_user.can(Permission.COMMENT) %}
+            {% include "_submit_comment.html" %}
+        {% else %}
+            <div style="text-align : center;
+                        color: #dd30bb;
+                        font-size: large;
+                        font-weight: bold">请登陆发表评论
+            </div>
+        {% endif %}
+    <p>&nbsp;</p>
+        <div align="center"><div name="dashmain" id="dash-main-id-879b6e" class="dash-main-2 879b6e-1" ></div><script type="text/javascript" charset="utf-8" src="https://www.dashangcloud.com/static/ds-2.0.js"></script></div>
+
+    </div>
+{% endblock %}
